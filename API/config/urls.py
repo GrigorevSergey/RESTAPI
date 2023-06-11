@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from rest_framework import routers
+from .yasg import urlpatterns as doc_urls
 
 
 urlpatterns = [
@@ -24,4 +24,6 @@ urlpatterns = [
     path("", include("rest.urls")),
 ]
 
+
+urlpatterns += doc_urls
 

@@ -39,3 +39,9 @@ class PerevalAddedSerializer(serializers.ModelSerializer):
         model = PerevalAdded
         exclude = ('id', 'status')
 
+
+class PerevalAddedUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PerevalAdded
+        fields = '__all__'
+        read_only_fields = ['user', ]
